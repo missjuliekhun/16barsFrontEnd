@@ -1,3 +1,4 @@
 (function(){
-  angular.module('sixteenBars');
+  angular
+    .module('sixteenBars');
 })();
