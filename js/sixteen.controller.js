@@ -1,33 +1,33 @@
 (function(){
   angular
     .module('sixteenBars')
-    .controller('sixteenBarsCtrl', sixteenBarsCtrl);
+    .controller('sixteenCtrl', sixteenCtrl);
 
-  sixteenBarsCtrl.$inject = ['$http', '$scope', 'SixteenBarsFactory'];
+  sixteenCtrl.$inject = ['$http', '$scope', 'SixteenFactory'];
 
-  function sixteenBarsCtrl($http, $scope, SixteenBarsFactory) {
+  function sixteenCtrl($http, $scope, SixteenFactory) {
     // var self = this;
     var rootURL = 'http://localhost:3000';
 
-    $scope.getSixteenBars = function(){
-      // $http.get(`${rootURL}/sixteenBars`)
-      SixteenBarsFactory.get()
+    $scope.getSixteen = function(){
+      // $http.get(`${rootURL}/sixteen`)
+      SixteenFactory.get()
         .then(function(res){
-          SixteenBarsFactory.sixteenBars = res.data;
-          console.log($scope.sixteenBars);
-          $scope.sixteenBars = SixteenBarsFactory.sixteenBars;
-          $scope.sixteenBars = undefined;
+          SixteenFactory.sixteen = res.data;
+          console.log($scope.sixteen);
+          $scope.sixteen = SixteenFactory.sixteen;
+          $scope.sixteen = undefined;
         })
         .catch(function(err){
           if(err)console.log(err);
         });
     };
 
-    $scope.showSixteenBars = function(id){
-      $http.get(`${rootURL}/sixteenBars/${id}`)
+    $scope.showSixteen = function(id){
+      $http.get(`${rootURL}/sixteen/${id}`)
         .then(function(res){
-          $scope.sixteenBars = res.data;
-          console.log($scope.sixteenBars);
+          $scope.sixteen = res.data;
+          console.log($scope.sixteen);
         })
         .catch(function(err){
           if(err)console.log(err);
@@ -35,34 +35,34 @@
     };
 
     //delete
-    $scope.destroySixteenBars = function(id){
-      $http.delete(`${rootURL}/sixteenBars/${id}`)
+    $scope.destroySixteen = function(id){
+      $http.delete(`${rootURL}/sixteen/${id}`)
         .then(function(res){
-          $scope.sixteenBars = undefined;
-          $scope.getSixteenBarss();
-          console.log($scope.sixteenBars);
+          $scope.sixteen = undefined;
+          $scope.getSixteen();
+          console.log($scope.sixteen);
         })
         .catch(function(err){
           if(err)console.log(err);
         });
     };
     //create
-    $scope.createSixteenBars = function(sixteenBars){
-    $http.post(`${rootURL}/sixteenBars`, sixteenBars)
+    $scope.createSixteen = function(sixteen){
+    $http.post(`${rootURL}/sixteen`, sixteen)
       .then(function(res){
-        $scope.sixteenBars = res.data;
-        console.log($scope.sixteenBars);
+        $scope.sixteen = res.data;
+        console.log($scope.sixteen);
       })
       .catch(function(err){
         if(err)console.log(err);
         });
     };
     //edit
-    $scope.editSixteenBars = function(sixteenBars){
-    $http.put(`${rootURL}/sixteenBars/${$scope.sixteenBars.id}`, sixteenBars)
+    $scope.editSixteen = function(sixteen){
+    $http.put(`${rootURL}/sixteen/${$scope.sixteen.id}`, sixteen)
       .then(function(res){
-        //$scope.getSixteenBarss(); //redirect to index
-        $scope.sixteenBars = res.data;
+        //$scope.getSixteen(); //redirect to index
+        $scope.sixteen = res.data;
               console.log($scope.
               );
       })
