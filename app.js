@@ -1,4 +1,4 @@
 (function(){
   angular
-  .module('sixteenBars', ["ui.router"]);
+  .module('sixteenBars', []);
 })();

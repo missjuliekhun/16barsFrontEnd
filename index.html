@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html data-ng-app='sixteenBars'>
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
     <meta charset="utf-8">
     <title>sixteen-bars</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+    <script src="app.js" charset="utf-8"></script>
     <script src="./js/sixteen.module.js" charset="utf-8"></script>
-    <script src="js/app.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 
 
 
@@ -16,7 +17,12 @@
   </head>
   <body>
 <h1>{{8 + 8}} BARS</h1>
-<div>So you think you've got bars?</div>
+<div>
+  <div class="think">So you think you've got bars?</div>
+<br>
+  <button type="button" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+  <button type="button" class="btn btn-default btn-lg btn-block">Sign In With Facebook</button>
+</div>
 
 
   </body>
