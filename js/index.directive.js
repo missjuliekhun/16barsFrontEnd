@@ -4,4 +4,7 @@
     .directive('sixteenIndex', sixteenIndex);
   });
 
-  
+  function sixteenIndex(){
+    restrict: 'A';
+    template:``;
+  }
