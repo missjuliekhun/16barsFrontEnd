@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html data-ng-app='16bars'>
+<html data-ng-app='sixteenBars'>
   <head>
     <meta charset="utf-8">
-    <title>16 Bars</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-<script src="./modulePath" charset="utf-8"></script>
-<script src="./controllerPath" charset="utf-8"></script>
+    <title>sixteen-bars</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="./app.js" charset="utf-8"></script>
+    <script src="./js/sixteen.module.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
   </head>
-  <body data-ng-controller='BarsCtrl'>
-    {{{body}}}
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="http://images.rapgenius.com/em5x5ltq6qclohhlzrga48qpv.1000x707x1.jpg" alt=""style="width:75px;height:35px;" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Your Bars</a></li>
+                <li><a href="#">Favorites</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    </header>
+<h1>{{8 + 8}} BARS</h1>
+<div>
+  <div class="think">So you think you've got bars?</div>
+<br>
+  <button type="button" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+  <button type="button" class="btn btn-default btn-lg btn-block">Sign In With Facebook</button>
+</div>
+<!-- Text area for bars -->
+<div>
+  <p>Bars: <textarea type="text" data-ng-model="barsModel"></textarea></p>
+  <p data-ng-bind="barsModel"></p>
+
+
+<!--username -->
+</div>
+<div data-ng-init="firstName='Anusone'">
+<p><span data-ng-bind="firstName"></span> The Poet</p>
+</div>
+
   </body>
 </html>
