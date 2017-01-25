@@ -5,9 +5,9 @@
 })();
 
 
-function sixteenShow(){
-  return {
-    restrict: 'E',
-    template: ``
-  }
-}
+// function sixteenShow(){
+//   return {
+//     restrict: 'E',
+//     template: ``
+//   }
+// }

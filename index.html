@@ -4,22 +4,20 @@
     <meta charset="utf-8">
     <title>sixteenbars</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
     <script src="./app.js" charset="utf-8"></script>
     <script src="./js/sixteen.module.js" charset="utf-8"></script>
     <script src="./js/index.directive.js" charset="utf-8"></script>
     <script src="./js/sixteen.controller.js" charset="utf-8"></script>
     <script src="./js/show.directive.js" charset="utf-8"></script>
     <script src="./js/sixteen.factory.js" charset="utf-8"></script>
-    <script src="lib/angular.js"></script>
-    <script src="lib/angular-ui-router.js"></script>
     <script src="./js/show.directive.js" charset="utf-8"></script>
-    <script src="./js/new.controller.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
   <body>
-    <header>
+    <header id='header'>
       <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -39,7 +37,7 @@
             <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigation <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Your Bars</a></li>
@@ -47,28 +45,30 @@
               </ul>
             </li>
           </ul>
+
           <form class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
+          <div id='buttons' class="navbar-right">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">Sign In</button></div>
 
+        </div>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
     </header>
 <h1>{{8 + 8}} BARS</h1>
-<div>
-  <div class="think">So you think you've got bars?</div><br>
-  <div class="signbuttons">
-    <button type="button" class="btn btn-primary btn-lg btn-block">Sign Up</button>
-    <button type="button" class="btn btn-default btn-lg btn-block">Sign In With Facebook</button></div>
 
-</div>
+  <div class="think">So you think you've got bars?</div><br>
+
+
 <!-- Text area for bars -->
-<div>
-  <p>Bars: <textarea type="text" data-ng-model="barsModel"></textarea></p>
+<div id='textArea'>
+  <p>Bars: <textarea rows="8" cols="50" type="text" data-ng-model="barsModel"></textarea></p>
   <p data-ng-bind="barsModel"></p>
 
 
@@ -77,7 +77,10 @@
 <div data-ng-init="firstName='Anusone'">
 <p><span data-ng-bind="firstName"></span> The Poet</p>
 </div>
+
+<!--states view-->
+<!-- <div ui-view></div> -->
+
+
   </body>
 </html>
-
-<!-- Index -->
