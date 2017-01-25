@@ -1,16 +1,28 @@
 body {
   text-align: center;
-  background-color: #ff3333;
+  background-color: silver;
+
 }
 
 div {
-  background-color: #ffffff;
+  background-color: silver;
+  text-align: center;
 }
 
-.signButtons {
-  width: 300px;
+#buttons {
+  text-align: center;
+  background-color: silver;
+  width: 100px;
+  height: 50px;
+
+
 }
 
-.signbuttons {
-  width: 300px;
+#header {
+  background-color: silver;
+}
+
+#textArea {
+  justify-content: flex-end;
+  display: inline-block;
 }
