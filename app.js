@@ -1,4 +1,15 @@
 (function(){
   angular
-  .module('sixteenBars', []);
+  .module('sixteenBars', ["ui.router"])
+  .config(["$stateProvider", Router])
+
+function Router($stateProvider){
+  console.log("working")
+}
+
+//show
+
+
+
+
 })();

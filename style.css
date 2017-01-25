@@ -13,4 +13,13 @@ div {
 
 .signbuttons {
   width: 300px;
+  text-align: center;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+.textarea {
+  margin-left: auto ;
+  margin-right: auto ;
+
 }

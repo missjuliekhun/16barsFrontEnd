@@ -9,5 +9,5 @@ function sixteenShow(){
   return {
     restrict: 'E',
     template: ``
-  }
+  };
 }
