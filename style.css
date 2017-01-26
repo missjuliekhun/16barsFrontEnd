@@ -4,6 +4,11 @@ body {
 
 }
 
+.class {
+  font-family: 'Architects Daughter', cursive;
+
+}
+
 div {
   background-color: silver;
   text-align: center;
