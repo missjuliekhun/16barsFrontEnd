@@ -11,18 +11,35 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
-  <body data-ng-controller='PoemsCtrl as vm'>
+  <body data-ng-controller='PoemCtrl as vm'>
+
 
 <h1>{{8 + 8}} BARS</h1>
 
   <div class="think">So you think you've got bars?</div><br>
-<button class="button" ng-click="getPoems()">poems stuff</button>
-<p>
+<button class="button" ng-click="getPoems()">show poems</button>
 
-</p>
 
 <!--states view-->
 <!-- <div ui-view></div> -->
+
+<div>
+
+       <table>
+          <tr>
+             <th>Title</th>
+             <th>Body</th>
+          </tr>
+
+          <tr ng-repeat="e in poems">
+            <div ng-click="showPoem(e.id)" ui-show='show'>
+
+            </div>
+             <td>{{ e.title }}</td>
+             <td>{{ e.body }}</td>
+          </tr>
+       </table>
+    </div>
 
 
   </body>
