@@ -3,80 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>sixteenbars</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
-    <script src="./app.js" charset="utf-8"></script>
-    <script src="./js/sixteen.module.js" charset="utf-8"></script>
-    <script src="./js/index.directive.js" charset="utf-8"></script>
-    <script src="./js/sixteen.controller.js" charset="utf-8"></script>
-    <script src="./js/show.directive.js" charset="utf-8"></script>
-    <script src="./js/sixteen.factory.js" charset="utf-8"></script>
-    <script src="./js/show.directive.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js" charset="utf-8"></script>
+    <script src="./js/poems.module.js" charset="utf-8"></script>
+    <script src="./js/poems.controller.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
-  <body>
-    <header id='header'>
-      <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="http://images.rapgenius.com/em5x5ltq6qclohhlzrga48qpv.1000x707x1.jpg" alt=""style="width:75px;height:35px;" /></a>
-        </div>
+  <body data-ng-controller='PoemsCtrl as vm'>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigation <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Your Bars</a></li>
-                <li><a href="#">Favorites</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-          <div id='buttons' class="navbar-right">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Sign Up</button>
-            <button type="button" class="btn btn-default btn-lg btn-block">Sign In</button></div>
-
-        </div>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-    </header>
 <h1>{{8 + 8}} BARS</h1>
 
   <div class="think">So you think you've got bars?</div><br>
+<button class="button" ng-click="getPoems()">poems stuff</button>
+<p>
 
-
-<!-- Text area for bars -->
-<div id='textArea'>
-  <p>Bars: <textarea rows="8" cols="50" type="text" data-ng-model="barsModel"></textarea></p>
-  <p data-ng-bind="barsModel"></p>
-
-
-<!--username -->
-</div>
-<div data-ng-init="firstName='Anusone'">
-<p><span data-ng-bind="firstName"></span> The Poet</p>
-</div>
+</p>
 
 <!--states view-->
 <!-- <div ui-view></div> -->
