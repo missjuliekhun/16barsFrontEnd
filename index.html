@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>sixteenbars</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
     <script src="./app.js" charset="utf-8"></script>
     <script src="./js/index.directive.js" charset="utf-8"></script>
@@ -16,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
-  <body>
+  <body ng-controller="SixteenCtrl as vm">
     <header id='header'>
       <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -52,7 +51,7 @@
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
-          <div id='buttons' class="navbar-right">
+          <div class="signbuttons navbar-right">
             <button type="button" class="btn btn-primary btn-lg btn-block">Sign Up</button>
             <button type="button" class="btn btn-default btn-lg btn-block">Sign In</button></div>
 
@@ -65,6 +64,8 @@
 <h1>{{8 + 8}} BARS</h1>
 
   <div class="think">So you think you've got bars?</div><br>
+  <div ui-view></div>
+
 
 
 <!-- Text area for bars -->
@@ -81,7 +82,17 @@
 </div>
 
 <!--states view-->
-<!-- <div ui-view></div> -->
+
+<body>
+  <div ui-view></div>
+  <h1>This is my first bar.</h1>
+<div ng-repeat="poems in getPoems">
+  <p>
+    {{poem.name}}
+  </p>
+  <p>
+    {{poem.title}}
+  </p>
 
 
   </body>

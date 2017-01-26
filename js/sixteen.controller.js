@@ -23,6 +23,7 @@
         });
     };
 
+    //show
     $scope.showSixteen = function(id){
       $http.get(`${rootURL}/sixteen/${id}`)
         .then(function(res){
@@ -46,6 +47,7 @@
           if(err)console.log(err);
         });
     };
+
     //create
     $scope.createSixteen = function(sixteen){
     $http.post(`${rootURL}/sixteen`, sixteen)
@@ -57,6 +59,7 @@
         if(err)console.log(err);
         });
     };
+
     //edit
     $scope.editSixteen = function(sixteen){
     $http.put(`${rootURL}/sixteen/${$scope.sixteen.id}`, sixteen)

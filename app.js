@@ -1,5 +1,6 @@
+'use strict';
+
 (function(){
-  'use strict';
   angular
   .module('sixteenBars', ["ui.router"])
   .config(["$stateProvider", Router])
@@ -9,6 +10,21 @@ function Router($stateProvider){
 }
 
 })();
+
+  .controller("sixteenCtrl", [sixteenCtrl]);
+function SixteenCtrlFunction(){
+  console.log("I'm in the controller!");
+}
+
+
+function Router($stateProvider){
+  $stateProvider
+  .state("sixteenIndex", {
+    url: "/sixteen",
+    controller: "sixteenCtrl",
+    controllerAs: "vm"
+  });
+}
 
 
 // .state('index', {

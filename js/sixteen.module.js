@@ -1,4 +1,4 @@
 (function(){
   angular
-    .module('sixteenBars');
+    .module('sixteenBars', []);
 })();
