@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
-  <body data-ng-controller='PoemsCtrl as vm'>
+  <body data-ng-controller='PoemCtrl as vm'>
 
 
 <h1>{{8 + 8}} BARS</h1>
@@ -20,21 +20,26 @@
 <button class="button" ng-click="getPoems()">show poems</button>
 
 
-<!-- Text area for bars -->
-<div id='textArea'>
-  <p>Bars: <textarea rows="8" cols="50" type="text" data-ng-model="barsModel"></textarea></p>
-
-  <p data-ng-bind="barsModel"></p>
-
-
-<!--username -->
-</div>
-<div data-ng-init="firstName='Anusone'">
-<p><span data-ng-bind="firstName"></span> The Poet</p>
-</div>
-
 <!--states view-->
 <!-- <div ui-view></div> -->
+
+<div>
+
+       <table>
+          <tr>
+             <th>Title</th>
+             <th>Body</th>
+          </tr>
+
+          <tr ng-repeat="e in poems">
+            <div ng-click="showPoem(e.id)" ui-show='show'>
+
+            </div>
+             <td>{{ e.title }}</td>
+             <td>{{ e.body }}</td>
+          </tr>
+       </table>
+    </div>
 
 
   </body>
