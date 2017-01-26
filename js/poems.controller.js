@@ -1,4 +1,4 @@
-(function() {
+(function(){
     angular
         .module('sixteenBars')
         .controller('PoemsCtrl', ['$http', '$scope', PoemsCtrl]);
