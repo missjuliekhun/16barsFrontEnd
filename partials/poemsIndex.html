@@ -1,9 +1,8 @@
 <h1>INDEX</h1>
 
-
+<button ui-sref='create'>New Poem</button>
 <div ng-repeat='e in poems'>
   <h3 ng-click='showPoem(e._id)'>{{e.title}}</h3>
 <h4>{{e.body}}</h4>
 </div>
-
 <button ng-click='getPoems()'>GET POEMS</button>

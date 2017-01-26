@@ -20,22 +20,17 @@
           $state.go('show')
         });
     };
-
-    //test
-    $scope.test = function(){
-      console.log($scope.poem)
-      console.log($scope.poem.title)}
 //delete
-    $scope.destroyPoems = function(id){
+    $scope.destroyPoem = function(id){
       $http.delete(`http://localhost:3000/api/poems/${_id}`)
         .then(function(res){
           $scope.poems = undefined;
           $scope.getPoems();
-
         });
     };
 //create
-    $scope.createPoems = function(poem){
+    $scope.createPoem = function(poem){
+      console.log(poem);
     $http.post(`http://localhost:3000/api/poems/`, poem)
       .then(function(res){
         $scope.poems = res.data;
@@ -43,7 +38,7 @@
       });
     };
 //edit
-    $scope.editPoems = function(poem){
+    $scope.editPoem = function(poem){
     $http.put(`http://localhost:3000/api/poems/${$scope.poem.id}`, poem)
       .then(function(res){
         $scope.poem = res.data;
