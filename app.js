@@ -1,21 +1,9 @@
-<<<<<<< HEAD
+
 var express = require("express");
 var app = express();
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose');
-=======
-(function(){
-  'use strict';
-  angular
-  .module('sixteenBars', ["ui.router"])
-  .config(["$stateProvider", Router])
 
-function Router($stateProvider){
-  console.log("working")
-}
-
-})();
->>>>>>> origin/master
 
 //naming our app
 mongoose.connect('mongodb://localhost:3000/api/poems');
