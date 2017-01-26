@@ -3,9 +3,10 @@
         .module('sixteenBars')
         .controller('PoemsCtrl', ['$http', '$scope', '$state', PoemsCtrl]);
     function PoemsCtrl($http, $scope, $state) {
+      var rootURL = 'https://sixteen-bars.herokuapp.com/' || 'http://localhost:3000/'
 //index
     $scope.getPoems = function(){
-      $http.get('http://localhost:3000/api/poems')
+      $http.get(`${rootURL}api/poems`)
       .then(function(res){
         $scope.poems = res.data;
         console.log($scope.poems)
