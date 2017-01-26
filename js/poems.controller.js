@@ -8,7 +8,6 @@
       $http.get('http://localhost:3000/api/poems')
       .then(function(res){
         $scope.poems = res.data;
-        console.log($scope.poems)
       });
           };
 //show
@@ -16,7 +15,6 @@
       $http.get(`http://localhost:3000/api/poems/${id}`)
         .then(function(res){
           $scope.poem = res.data;
-          console.log($scope.poem);
           $state.go('show')
         });
     };
@@ -30,19 +28,17 @@
     };
 //create
     $scope.createPoem = function(poem){
-      console.log(poem);
     $http.post(`http://localhost:3000/api/poems/`, poem)
       .then(function(res){
         $scope.poems = res.data;
         console.log($scope.poems);
       });
     };
-//edit
+//edit - only works the first time, not sure why?
     $scope.editPoem = function(poem){
-    $http.put(`http://localhost:3000/api/poems/${$scope.poem.id}`, poem)
+     $http.put(`http://localhost:3000/api/poems/${poem._id}`, poem)
       .then(function(res){
         $scope.poem = res.data;
-              console.log($scope.poems);
       });
     };
   };
