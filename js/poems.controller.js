@@ -1,8 +1,8 @@
 (function() {
     angular
         .module('sixteenBars')
-        .controller('PoemCtrl', ['$http', '$scope', PoemCtrl]);
-    function PoemCtrl($http, $scope) {
+        .controller('PoemsCtrl', ['$http', '$scope', PoemsCtrl]);
+    function PoemsCtrl($http, $scope) {
 
     $scope.getPoems = function(){
       $http.get('http://localhost:3000/api/poems')
