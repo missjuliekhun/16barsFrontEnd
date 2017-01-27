@@ -1,8 +1,9 @@
 (function(){
     angular
         .module('sixteenBars')
-        .controller('PoemsCtrl', ['$http', '$scope', '$state', '$window', PoemsCtrl]);
-    function PoemsCtrl($http, $scope, $state, $window) {
+        .controller('PoemsCtrl', ['$http', '$scope', '$state', '$window', '$stateParams', PoemsCtrl])
+        // .config($ionicConfigProvider.views.maxCache(0));
+    function PoemsCtrl($http, $scope, $state, $window, $stateParams) {
       var rootURL = 'https://sixteen-bars.herokuapp.com/api/poems/';
 //redirect
       $scope.redirect = function(){
@@ -25,13 +26,25 @@
     };
 //delete
     $scope.destroyPoem = function(poem){
-      $http.delete(rootURL + poem._id, poem)
+      console.log(`${JSON.stringify($scope.poems)}`)
+      var index = $scope.poems.indexOf(poem);
+        $scope.poems = $scope.poems.splice(poem, 1);
+        console.log(`${JSON.stringify($scope.poems)}`)
+      $http.delete(rootURL + poem._id)
         .then(function(res){
-          $scope.poem = undefined;
-            $state.go('indexDelete', {}, {reload: true})
+          console.log('next stuff')
+            // $state.go('indexDelete', {}, {reload: true})
+//             $state.transition('indexDelete', $stateParams,  {
+//     reload: true,
+//     inherit: false,
+//     notify: true
+// });
 //delete works but doesnt refresh
 
-      });
+      })
+      .catch(function(res){
+        console.log("catch stuff")
+      })
     };
 
 //create
@@ -40,7 +53,6 @@
       .then(function(res){
         $scope.poems = res.data;
           $state.go('index')
-
         console.log($scope.poems);
       });
     };

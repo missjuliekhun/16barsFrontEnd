@@ -14,6 +14,7 @@ angular
     .state('indexDelete', {
         url: '/poems',
         templateUrl: '/partials/poemsIndex.html',
+        controller: 'PoemsCtrl'
     })
     // The state that shows one poem. / delete is buttton within this state.
     .state('show', {
