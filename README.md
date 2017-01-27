@@ -9,12 +9,20 @@ Poems will contain 16 bars and will be posted and voted upon.
 A leaderboard will show the rankings of the most favorited poems.
 
 ##TECNOLOGIES USED
-Ui-Router:
-API: [Mongodb: Mongoose:]
-Express: (Middleware)
-AngularJS: $http, $scope, $state, $window, $stateParams
-Node.js:
+Ui-Router:  
+
+API: [Mongodb: Mongoose:]  
+
+Express: (Middleware)  
+
+AngularJS: $http, $scope, $state, $window, $stateParams  
+
+Node.js:  
+
 HTTP:
+
+Heroku
+
 
 
 
