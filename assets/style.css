@@ -9,6 +9,17 @@ div {
   text-align: center;
 }
 
+.head {
+  color: #493548;
+  font-size: 90px;
+  font-family: 'Architects Daughter', cursive;
+  margin-top: 50px;
+
+}
+
+
+
+
 #buttons {
   text-align: center;
   background-color: silver;

@@ -5,13 +5,17 @@
     <title>sixteenbars</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
-    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <script type="text/javascript" src="./assets/app.js"></script>
     <script src="./js/poems.controller.js" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
   </head>
 
   <body data-ng-controller='PoemsCtrl'>
-<h1>{{8 + 8}} BARS</h1>
+
+
+<h1 class="head">{{8 + 8}} BARS</h1>
   <div class="think">So you think you've got bars?</div><br>
 <!--states view-->
  <div ui-view></div>

@@ -1,6 +1,6 @@
 (function(){
 angular
-  .module('sixteenBars', ["ui.router", ])
+  .module('sixteenBars', ["ui.router"])
   .config(["$stateProvider", Router])
 
   function Router($stateProvider){
