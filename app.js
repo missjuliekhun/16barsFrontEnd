@@ -11,6 +11,10 @@ angular
         url: '/poems',
         templateUrl: '/partials/poemsIndex.html',
     })
+    .state('indexDelete', {
+        url: '/poems',
+        templateUrl: '/partials/poemsIndex.html',
+    })
     // The state that shows one poem. / delete is buttton within this state.
     .state('show', {
         url: '/poem',
@@ -23,8 +27,9 @@ angular
     })
     // The state that shows edit.
     .state('edit', {
-        url: '/poemEdit',
+        url: '/poem',
         templateUrl: '/partials/poemEdit.html',
     })
+
   }
 })();
