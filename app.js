@@ -9,22 +9,22 @@ angular
     // The state that shows all poems.
     .state('index', {
         url: '/poems',
-        templateUrl: '/partials/poemsIndex.html',
+        templateUrl: './partials/poemsIndex.html',
     })
     // The state that shows one poem. / delete is buttton within this state.
     .state('show', {
         url: '/poem',
-        templateUrl: '/partials/poemShow.html',
+        templateUrl: './partials/poemShow.html',
     })
     // Tbe state that shows new poem form.
     .state('create', {
         url: '/poemNew',
-        templateUrl: '/partials/poemNew.html',
+        templateUrl: './partials/poemNew.html',
     })
     // The state that shows edit.
     .state('edit', {
         url: '/poemEdit',
-        templateUrl: '/partials/poemEdit.html',
+        templateUrl: './partials/poemEdit.html',
     })
   }
 })();
