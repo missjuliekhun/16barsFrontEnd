@@ -1,19 +1,65 @@
 body {
   text-align: center;
-  background-color: silver;
+  background-color: #CEABB1;
 
 }
 
 div {
-  background-color: silver;
+  background-color: #CEABB1;
   text-align: center;
+  margin-top: -10px;
 }
 
-.head {
+.dontdie{
+  background-color: #CEABB1;
+
+}
+
+.container {
+    border-radius: 25px;
+    padding: 20px;
+    width: 500px;
+    height: 150px;
+    color: #493548;
+    font-size: 90px;
+    font-family: 'Bowlby One SC', cursive;
+    margin-top: 50px;
+}
+
+
+.think {
   color: #493548;
-  font-size: 90px;
-  font-family: 'Architects Daughter', cursive;
+  font-size: 30px;
+  font-family: 'Bowlby One SC', cursive;
   margin-top: 50px;
+  background-color: #CEABB1;
+}
+
+
+.poembody {
+  color: #493548;
+  font-size: 15px;
+  font-family: 'Architects Daughter', cursive;
+  /*background-color: red;*/
+
+}
+
+.poemtitle {
+  color: #4B4E6D;
+  font-size: 25px;
+  /*background-color:;*/
+
+}
+
+.poembackground {
+  background-color: #E8EBE4;
+  /*width: 500px;
+  height: 150px;*/
+}
+
+.footer {
+  margin-top: 300px;
+  background-color: #CEABB1;
 
 }
 
@@ -22,7 +68,7 @@ div {
 
 #buttons {
   text-align: center;
-  background-color: silver;
+  background-color: #E9EBF8;
   width: 100px;
   height: 50px;
 

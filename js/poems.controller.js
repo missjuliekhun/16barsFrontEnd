@@ -39,6 +39,12 @@
      $http.put(rootURL + poem._id, poem)
       .then(function(res){
         $scope.poem = res.data;
+        $scope.editPoem = {
+        "color" : "white",
+        "background-color" : "coral",
+        "font-size" : "60px",
+        "padding" : "50px"
+    }
       });
     };
   };

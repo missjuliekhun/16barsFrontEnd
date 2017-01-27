@@ -1,9 +1,11 @@
-<h1>SHOW</h1>
+<link rel="stylesheet" type="text/css" href="./assets/style.css"/>
 
-<div ng-show="poem">
-<h1>{{poem.title}}</h1>
-<h3>{{poem.body}}</h3>
+
+<h1>SHOW</h1>
+  <div ng-show="poem">
+  <h1>{{poem.title}}</h1>
+  <h3>{{poem.body}}</h3>
 </div>
 
-<button ui-sref='edit'>Edit Poem</button>
-<button ng-click='destroyPoem(poem)'>Delete Poem</button>
+  <button ui-sref='edit'>Edit Poem</button>
+  <button ng-click='destroyPoem(poem)'>Delete Poem</button>

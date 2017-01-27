@@ -1,6 +1,9 @@
-<h1>EDIT</h1>
+<link rel="stylesheet" type="text/css" href="./assets/style.css"/>
+
+
+<h1 ng-controller="PoemsCtrl" ng-style="editPoem">EDIT</h1>
 <form ng-submit="editPoem(poem)">
-    <h4>New Poem</h4>
+    <h4 ng-style="editPoem">New Poem</h4>
     <label for="title">Title</label><br>
     <input type="text" ng-model="poem.title"><br>
     <label for="title">Body</label><br>
