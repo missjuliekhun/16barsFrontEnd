@@ -1,29 +1,62 @@
 body {
   text-align: center;
   background-color: silver;
-
+  background-image: url(http://wallpapercave.com/wp/LRxGqsU.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-div {
-  background-color: silver;
-  text-align: center;
-}
 
 #buttons {
   text-align: center;
   background-color: silver;
   width: 100px;
   height: 50px;
-
-
+}
+button:hover {
+  background-color: white;
+  border-style: 2px solid;
 }
 
 #header {
   background-color: silver;
+  color: white;
 }
 
 
 #textArea {
   justify-content: flex-end;
   display: inline-block;
+}
+
+a:hover {
+text-shadow: 2px 2px lightblue;
+border: solid;
+}
+
+.headerBars {
+  font-size: 100px;
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+}
+.headerBars:hover {
+  text-shadow: 2px 2px lightblue;
+}
+.poemsClass {
+  width: 1200px;
+  border-style: solid;
+  justify-content: center;
+  display: block;
+  background-color: gray;
+  color: white;
+  padding-bottom: 10px;
+  margin: 10px;
+}
+.think {
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    color: lightblue;
+}
+.h1 {
+  color: lightblue;
 }

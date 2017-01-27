@@ -7,34 +7,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
     <script src="./js/poems.controller.js" charset="utf-8"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Sixteen Bars</a>
+      </div>
 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Sign Up<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Sign In</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="https://sixteen-bars.herokuapp.com/#/poems">Poems</a></li>
+            </ul>
+          </li>
+        </ul>
+  </nav>
+</header>
   <body data-ng-controller='PoemsCtrl'>
-<h1>{{8 + 8}} BARS</h1>
+    <h1 class='headerBars'>SIXTEEN BARS</h1>
   <div class="think">So you think you've got bars?</div><br>
 <!--states view-->
- <div ui-view></div>
+<div ui-view></div>
 
 
 
-<!-- <div>
 
-       <table>
-          <tr>
-             <th>Title</th>
-             <th>Body</th>
-          </tr>
 
-          <tr ng-repeat="e in poems">
-            <div ng-click="showPoem(e.id)" ui-show='show'>
 
-            </div>
-             <td>{{ e.title }}</td>
-             <td>{{ e.body }}</td>
-          </tr>
-       </table>
-    </div> -->
+
+
+
 
 
   </body>

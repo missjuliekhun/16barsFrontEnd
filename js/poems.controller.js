@@ -28,7 +28,8 @@
     $scope.destroyPoem = function(poem){
       console.log(`${JSON.stringify($scope.poems)}`)
       var index = $scope.poems.indexOf(poem);
-        $scope.poems = $scope.poems.splice(poem, 1);
+        $scope.poems = $scope.poems.splice(poem, 0);
+        $state.go('indexDelete')
         console.log(`${JSON.stringify($scope.poems)}`)
       $http.delete(rootURL + poem._id)
         .then(function(res){
@@ -51,7 +52,7 @@
     $scope.createPoem = function(poem){
     $http.post(rootURL , poem)
       .then(function(res){
-        $scope.poems = res.data;
+        console.log($scope.poem + 'poem')
           $state.go('index')
         console.log($scope.poems);
       });

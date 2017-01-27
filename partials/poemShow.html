@@ -1,9 +1,9 @@
-<h1>SHOW</h1>
-
-<div ng-show="poem">
-<h1>{{poem.title}}</h1>
+<center>
+  <div class='poemsClass' ng-show="poem">
+<h1 class='poemPadding'>{{poem.title}}</h1>
 <h3>{{poem.body}}</h3>
 </div>
 
 <button ui-sref='edit'>Edit Poem</button>
 <button ng-click='destroyPoem(poem); redirect()'>Delete Poem</button>
+</center>
