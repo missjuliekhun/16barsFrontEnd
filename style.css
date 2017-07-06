@@ -1,12 +1,41 @@
 body {
   text-align: center;
-  background-color: silver;
+  background-color: #1b204c;
 
 }
 
 div {
-  background-color: silver;
+  color: #ffffff;
+  font-family: "Chewy", cursive;
+
+
+}
+
+div p {
+  background-color: #472373;
   text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 3px solid white;
+  padding: 10px;
+
+}
+
+
+h1 {
+  font-size: 80px;
+  color: #472373;
+  font-family: "Chewy", cursive;
+
+
+}
+
+.think {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+
+
 }
 
 #buttons {
@@ -16,10 +45,6 @@ div {
   height: 50px;
 
 
-}
-
-#header {
-  background-color: silver;
 }
 
 
